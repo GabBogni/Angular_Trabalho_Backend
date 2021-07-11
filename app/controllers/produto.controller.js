@@ -21,7 +21,7 @@ exports.create = (req, res) => {
     })
     .catch(
         err => {
-            res.status(500).json({msg: err})
+            res.status(500).json({msg: err._message})
         }
     )
 }
@@ -35,7 +35,7 @@ exports.findAll = (req, res) => {
     })
     .catch(
         err => {
-            res.status(500).json({msg: err})
+            res.status(500).json({msg: err._message})
         }
     )
 
@@ -57,7 +57,7 @@ exports.deleteOne = (req, res) => {
     )
     .catch(
         err => {
-            res.status(500).json({msg: "Erro"})
+            res.status(500).json({msg: err._message})
         }
     )
     
@@ -86,7 +86,7 @@ exports.UpdateOne = (req, res) => {
     )
     .catch(
         err => {
-            res.status(500).json({msg: err})
+            res.status(500).json({msg: err._message})
         }
     )
 }
